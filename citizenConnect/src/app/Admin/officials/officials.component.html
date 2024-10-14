@@ -1,0 +1,36 @@
+<div class="container">
+  <app-admin-sidebar class="sidebar"></app-admin-sidebar>
+  <div class="main-content">
+    <div class="header">
+      <h1>Admin Manage Government Officials</h1>
+    </div>
+    <div class="content">
+      <h3>Welcome Admin!</h3>
+      <h4>Government Officials:</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let official of officials">
+            <td>{{ official.name }}</td>
+            <td>{{ official.email }}</td>
+            <td>{{ official.isApproved ? 'Approved' : 'Pending' }}</td>
+            <td>
+              <button *ngIf="!official.isApproved" (click)="approveOfficial(official.id)">Approve</button>
+              <button (click)="deleteOfficial(official.id)">
+                <i class="fas fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

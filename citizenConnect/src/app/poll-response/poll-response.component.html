@@ -1,0 +1,17 @@
+<div class="mt-3" *ngIf="pollResults.length > 0">
+  <h5>Responses</h5>
+  <div *ngFor="let result of pollResults">
+    <div class="progress">
+      <div class="progress-bar" role="progressbar"
+           [style.width]="result.percentage + '%'"
+           [attr.aria-valuenow]="result.percentage" aria-valuemin="0" aria-valuemax="100">
+        {{ result.option }} ({{ result.percentage | number:'1.0-0' }}%)
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="pollResults.length === 0">
+  <p>No responses yet for this poll.</p>
+</div>
+
+

@@ -1,0 +1,181 @@
+/* General Styling */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+.header {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header nav ul li {
+    margin-left: 20px;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.header img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Intro Section Styling */
+.intro-section {
+    background-image: url('../../assets/home.jpg');
+    background-size: contain; /* changed from cover to contain */
+    background-position: center;
+    height: 400px;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.intro-section p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Services Section Styling */
+.services {
+    background-color: rgba(240, 240, 240, 0.8); 
+    padding: 20px 0; 
+    width: 1000px; 
+    margin: -50px auto 0; 
+    text-align: center;
+    border-radius: 50px;
+    position: relative; 
+    z-index: 5; 
+}
+
+.services h2 {
+    margin-bottom: 30px;
+}
+
+.services .img1 {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.services .img1 img {
+    width: 100px;
+    height: 100px;
+}
+
+.services .img1 p {
+    margin-top: 10px;
+}
+
+.testimonials {
+    background-color: #fff;
+    padding: 50px 0;
+    display: flex; /* add flexbox layout */
+    align-items: center; /* vertically center the content */
+}
+
+.testimonials .img2 {
+    margin-right: 20px; /* add some space between the image and content */
+}
+
+.testimonials .img2 img {
+    display: inline;
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* add this property */
+}
+
+.testimonials .content {
+    flex: 1; /* take up the remaining space */
+}
+
+.testimonials h2 {
+    text-align: left; /* left align the h2 title */
+    margin-bottom: 10px; /* reduce margin bottom */
+}
+
+.testimonials p {
+    margin-bottom: 20px; /* add some margin bottom */
+}
+
+.testimonials h3 {
+    margin-top: 0;
+    text-align: left; /* left align the h3 text */
+}
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer .comtact p {
+    margin-bottom: 10px;
+}
+
+.footer .link h4 {
+    margin-bottom: 20px;
+}
+
+.footer .link nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .link nav ul li {
+    margin-bottom: 10px;
+}
+
+.footer .link nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .header nav ul {
+        flex-direction: column;
+    }
+
+    .header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer .comtact,
+    .footer .link {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,34 @@
+.chat-area {
+    margin-top: 20px;
+  }
+  
+  .chat-box {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 100px;
+  }
+  
+  .chat-input {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid lightblue;
+    margin-right: 10px;
+  }
+  
+  .chat-input button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,30 @@
+.side-nav {
+    width: 200px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    height: 1000px;
+  }
+  
+  .side-nav-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  .side-nav-item a{
+    text-decoration: none;
+    color: white;
+
+  }
+  
+  .side-nav-item:hover {
+    background-color: wheat;
+  }
+  
+  .badge {
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 10px;
+  }
+  

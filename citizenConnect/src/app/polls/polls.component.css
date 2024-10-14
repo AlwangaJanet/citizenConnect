@@ -1,0 +1,108 @@
+/* Global Styles */
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  /* Poll Card Styles */
+  
+  .card {
+    margin: 20px;
+    background-color: lightblue;
+    color: black;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .list-group {
+    margin-bottom: 20px;
+  }
+  
+  .list-group-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .list-group-item.active {
+    background-color: #f0f0f0;
+  }
+  
+  .list-group-item:last-child {
+    border-bottom: none;
+  }
+  
+  /* Radio Button Styles */
+  
+  input[type="radio"] {
+    margin: 0 10px 0 0;
+  }
+  
+  /* Button Styles */
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #337ab7;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #23527c;
+  }
+  
+  /* Poll Response Styles */
+  
+  .poll-response {
+    margin-top: 20px;
+  }
+  
+  .progress {
+    height: 20px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #337ab7;
+    transition: width 0.5s ease;
+  }
+  
+  .progress-bar span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px;
+  }

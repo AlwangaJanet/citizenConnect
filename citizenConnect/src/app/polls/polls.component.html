@@ -1,0 +1,22 @@
+<div *ngIf="poll" class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ poll.Question }}</h5>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <input type="radio" name="pollOption" [value]="poll.Option1" [(ngModel)]="selectedOption"> {{ poll.Option1 }}
+      </li>
+      <li class="list-group-item">
+        <input type="radio" name="pollOption" [value]="poll.Option2" [(ngModel)]="selectedOption"> {{ poll.Option2 }}
+      </li>
+    </ul>
+    <button class="btn btn-primary" (click)="castVote()" [disabled]="!selectedOption">Vote</button>
+    <app-poll-response></app-poll-response>
+  </div>
+</div>
+
+
+
+
+
+
+

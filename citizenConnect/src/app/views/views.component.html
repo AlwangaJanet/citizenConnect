@@ -1,0 +1,24 @@
+<!-- view.component.html -->
+<div class="view-container">
+  <div class="hero">
+    <img src="../../assets/views.jpg" alt="Hero Image">
+    <div class="hero-text">
+      <h2>Share some of your views with us today!</h2>
+    </div>
+  </div>
+  <div class="add-view">
+    <h2>Add View</h2>
+    <form [formGroup]="viewForm">
+      <label for="title">Title:</label>
+      <input formControlName="title" type="text" id="title" required>
+      <label for="description">Description:</label>
+      <textarea formControlName="description" id="description" required></textarea>
+      <button type="submit" (click)="submitView()">Submit View</button>
+    </form>
+  </div>
+  <div class="existing-views">
+    <a routerLink="/users-views">Existing Views →</a>
+  </div>
+</div>
+
+  

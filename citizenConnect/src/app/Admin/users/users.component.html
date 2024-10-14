@@ -1,0 +1,33 @@
+<div class="container">
+  <app-admin-sidebar class="sidebar"></app-admin-sidebar>
+  <div class="main-content">
+    <div class="header">
+      <h1>Admin Manage Users</h1>
+    </div>
+    <div class="content">
+      <h3>Welcome Admin!</h3>
+      <h4>Users:</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+              <button (click)="deleteUser(user.id)">
+                <i class="fas fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+   

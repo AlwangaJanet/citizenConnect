@@ -1,0 +1,11 @@
+<h2>Welcome User!</h2>
+<div class="educate-container">
+    <div class="sidenav">
+      <app-pdf-list (pdfSelected)="onPdfSelected($event)"></app-pdf-list>
+    </div>
+    <div class="main-content">
+      <app-pdf-viewer [selectedPdf]="selectedPdf"></app-pdf-viewer>
+      <app-chat></app-chat>
+    </div>
+  </div>
+  

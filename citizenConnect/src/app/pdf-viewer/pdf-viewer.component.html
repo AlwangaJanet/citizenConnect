@@ -1,0 +1,10 @@
+<div class="pdf-viewer">
+    <ng-container *ngIf="selectedPdf; else placeholder">
+      <h2>{{ selectedPdf }}</h2>
+      <!-- Here you would embed your PDF viewer component/library -->
+    </ng-container>
+    <ng-template #placeholder>
+      <p>Select a document to view.</p>
+    </ng-template>
+  </div>
+  

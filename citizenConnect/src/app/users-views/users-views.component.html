@@ -1,0 +1,11 @@
+<div class="views-container">
+    <h2>Views</h2>
+    <ul class="views-list">
+      <li *ngFor="let view of views" class="view-item">
+        <h3>{{ view.Title }}</h3>
+        <p>{{ view.Description }}</p>
+        <span class="view-date">{{ view. UserID | date }}</span>
+      </li>
+    </ul>
+  </div>
+  

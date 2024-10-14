@@ -1,0 +1,24 @@
+<div class="incidents-container">
+  <div class="police-line">
+    <span>POLICE LINE DO NOT CROSS</span>
+  </div>
+  <div class="header">
+    <!-- <h1>Incidents Page</h1> -->
+    <img src="../../assets/incidents.jpg" alt="Logo" class="logo">
+  </div>
+  <div class="content">
+    <div class="form-container">
+      <h2>Add Incident</h2>
+      <form [formGroup]="incidentForm">
+        <input formControlName="title" type="text" placeholder="Title" />
+        <textarea formControlName="description" placeholder="Description" rows="5"></textarea>
+        <input formControlName="media" type="file" accept="image/*" />
+        <button type="submit" (click)="submitIncident()">Submit Incident</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer">
+    <a routerLink="/users-incidents">Existing Incidents →</a>
+  </div>
+</div>
+

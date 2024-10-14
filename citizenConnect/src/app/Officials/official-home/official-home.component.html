@@ -1,0 +1,65 @@
+<div class="dashboard-container">
+  <app-official-sidebar></app-official-sidebar>
+  <div class="main-content">
+    <div class="header">
+      <h1>Government Official Page</h1>
+    </div>
+    <div class="content">
+      <div class="section-subtitle">Welcome Back!</div>
+      <div class="section">
+        <div class="section-header">
+          <h2>Poll Stats</h2>
+          <div class="actions">
+            <button class="create-new" (click)="createNewPoll()">Create New</button>
+            <button class="import">Import</button>
+          </div>
+        </div>
+        <div class="polls-container">
+          <div class="poll" *ngFor="let poll of polls">
+            <div class="poll-header">
+              <input type="checkbox" />
+              <label for="poll">{{poll.question}}</label>
+              <span class="responses">{{poll.responses}} responses</span>
+            </div>
+            <div class="poll-body">
+              <div class="poll-chart">
+                <div class="chart-title">Average response: {{poll.averageResponse}}</div>
+                <canvas class="chart" id="poll-chart-{{poll.id}}"></canvas>
+                <div class="chart-actions">
+                  <button class="hide-results">Hide Results</button>
+                  <button class="hide-correct-answer">Hide Correct Answer</button>
+                  <button class="re-run-poll">Re-run Poll</button>
+                </div>
+              </div>
+              <div class="poll-scores">
+                <h3>Scores after 3 questions</h3>
+                <table class="scores-table">
+                  <thead>
+                    <tr>
+                      <th>Place</th>
+                      <th>Score</th>
+                      <th>Participants</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let score of poll.scores">
+                      <td>{{score.place}}</td>
+                      <td>{{score.score}}</td>
+                      <td>{{score.participants}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="scores-info">
+                  <p>Participants: {{poll.participants}}</p>
+                  <p>Average score: {{poll.averageScore}}</p>
+                  <button class="display-leaderboard">Display Leaderboard</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

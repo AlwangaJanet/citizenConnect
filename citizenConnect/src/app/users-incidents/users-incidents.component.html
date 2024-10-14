@@ -1,0 +1,15 @@
+<div *ngIf="incidents.length > 0; else noIncidents">
+  <div *ngFor="let incident of incidents" class="incident-card">
+    <div class="incident-content">
+      <h3>{{ incident.Title }}</h3>
+      <p>{{ incident.Description }}</p>
+    </div>
+    <img [src]="incident.MediaUrl" alt="Incident Media" *ngIf="incident.MediaUrl" class="incident-image">
+  </div>
+</div>
+<ng-template #noIncidents>
+  <div class="no-incidents">
+    <p>No incidents found.</p>
+  </div>
+</ng-template>
+

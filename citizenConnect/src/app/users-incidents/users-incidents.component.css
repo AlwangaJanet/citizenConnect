@@ -1,0 +1,41 @@
+.incident-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+  }
+  
+  .incident-content {
+    flex: 1;
+    margin-left: 15px;
+  }
+  
+  .incident-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .incident-content p {
+    margin: 0;
+    color: #555;
+  }
+  
+  .incident-image {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .no-incidents {
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  

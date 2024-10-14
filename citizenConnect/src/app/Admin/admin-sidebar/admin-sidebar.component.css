@@ -1,0 +1,24 @@
+.sidebar {
+    width: 200px;
+    background-color: #000;
+    color: #fff;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .side-nav-item {
+    margin: 1em 0;
+    cursor: pointer;
+    padding: 0.5em;
+  }
+  
+  .side-nav-item:hover {
+    background-color: #444;
+  }
+  
+  .side-nav-item.active {
+    background-color: #444;
+  }
+  

@@ -1,0 +1,104 @@
+/* incidents.component.css */
+.incidents-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.police-line {
+  background-color: yellow;
+  padding: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+.police-line span {
+  background-color: black;
+  color: yellow;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.header {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.header img {
+  width: 100%;
+  height: 250px;
+}
+
+.header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 48px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-container {
+  background-color:lightblue;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  height: 400px;
+  margin-top: -50px; /* Adjust this value to overlap with the header */
+  z-index: 5;
+  position: relative;
+
+}
+
+.form-container h2 {
+  margin-bottom: 10px;
+}
+
+.form-container input[type="text"],
+.form-container textarea {
+  width: 350px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container input[type="file"] {
+  margin-bottom: 10px;
+}
+
+.form-container button[type="submit"] {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+.footer a {
+  color: blue;
+}

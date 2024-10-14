@@ -1,0 +1,28 @@
+<div class="dashboard-container">
+  <app-official-sidebar></app-official-sidebar>
+  <div class="container">
+    <div class="main-content">
+      <header>
+        <h1>Incidents Summary</h1>
+      </header>
+      <div class="incident-card" *ngFor="let incident of incidents">
+        <img [src]="incident.MediaUrl" alt="Incident Image" class="incident-image">
+        <div class="incident-details">
+          <h2>{{incident.Title}}</h2>
+          <p>{{incident.Description}}</p>
+          <div class="incident-footer">
+            <span class="user">{{incident.UserID}}</span>
+            <div class="actions">
+              <button (click)="summarizeIncident(incident.Description)">Summarize</button>
+              <button (click)="deleteIncident(incident.IncidentID)">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

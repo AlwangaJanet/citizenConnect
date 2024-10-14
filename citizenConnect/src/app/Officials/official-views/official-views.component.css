@@ -1,0 +1,44 @@
+.dashboard-container {
+  display: flex;
+}
+
+.views-summary {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.view-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: white;
+  border-color: lightblue;
+}
+
+.view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-content {
+  margin-top: 10px;
+}
+
+.view-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.view-actions button{
+  background-color: lightblue;
+  border-color: lightblue;
+}
+
+.summary-box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
