@@ -1,0 +1,9 @@
+USE citizenConnect
+GO
+CREATE OR ALTER PROCEDURE DeletePoll
+    @PollID VARCHAR(255)
+AS
+BEGIN
+    DELETE FROM Polls WHERE PollID = @PollID
+END
+GO

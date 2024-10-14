@@ -1,0 +1,8 @@
+USE citizenConnect
+GO
+CREATE OR ALTER PROCEDURE GetAllViews
+AS
+BEGIN
+    SELECT * FROM Views
+END
+GO

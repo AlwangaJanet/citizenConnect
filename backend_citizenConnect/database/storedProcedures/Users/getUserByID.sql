@@ -1,0 +1,9 @@
+USE citizenConnect;
+GO
+
+CREATE OR ALTER PROCEDURE GetUserByID
+    @UserID VARCHAR(255)
+AS
+BEGIN
+    SELECT * FROM Users WHERE UserID = @UserID AND IsDeleted = 0;
+END

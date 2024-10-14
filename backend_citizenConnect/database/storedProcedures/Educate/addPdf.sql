@@ -1,0 +1,13 @@
+USE citizenConnect
+GO
+CREATE OR ALTER PROCEDURE AddPDF
+    @PDFID VARCHAR(255),
+    @OfficialID VARCHAR(255),
+    @Title NVARCHAR(255),
+    @PDFUrl NVARCHAR(255)
+AS
+BEGIN
+    INSERT INTO PDFs (PDFID,OfficialID, Title, PDFUrl)
+    VALUES (@PDFID,@OfficialID, @Title, @PDFUrl)
+END
+GO

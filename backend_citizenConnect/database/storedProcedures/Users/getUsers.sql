@@ -1,0 +1,8 @@
+USE citizenConnect
+GO
+CREATE OR ALTER PROCEDURE GetAllUsers
+AS
+BEGIN
+    SELECT * FROM Users WHERE IsDeleted = 0;
+END
+GO

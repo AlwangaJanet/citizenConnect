@@ -1,0 +1,9 @@
+USE citizenConnect
+GO
+CREATE OR ALTER PROCEDURE GetPollByID
+    @PollID VARCHAR(255)
+AS
+BEGIN
+    SELECT * FROM Polls WHERE PollID = @PollID
+END
+GO

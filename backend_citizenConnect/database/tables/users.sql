@@ -1,0 +1,16 @@
+USE citizenConnect;
+GO
+CREATE TABLE Users (
+    UserID VARCHAR(255) PRIMARY KEY,
+    Name NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(100) UNIQUE NOT NULL,
+    PasswordHash NVARCHAR(255) NOT NULL,
+    Role NVARCHAR(20) CHECK (Role IN ('Citizen', 'Official', 'Admin')),
+    IsApproved BIT DEFAULT 0,
+    IsDeleted BIT DEFAULT 0,
+    CreatedAt DATETIME DEFAULT GETDATE()
+)
+GO
+
+SELECT * FROM Users
+DELETE FROM Users WHERE UserID = CONVERT(UNIQUEIDENTIFIER, '6278348b-8653-403f-97c7-5f63a5e1325f')

@@ -1,0 +1,10 @@
+USE citizenConnect
+GO
+CREATE TABLE PollResponses (
+    ResponseID VARCHAR(255) PRIMARY KEY,
+    PollID VARCHAR(255) NOT NULL FOREIGN KEY REFERENCES Polls(PollID),
+    UserID VARCHAR(255) NOT NULL FOREIGN KEY REFERENCES Users(UserID),
+    SelectedOption NVARCHAR(50) CHECK (SelectedOption IN ('Option1', 'Option2')),
+    CreatedAt DATETIME DEFAULT GETDATE()
+)
+GO

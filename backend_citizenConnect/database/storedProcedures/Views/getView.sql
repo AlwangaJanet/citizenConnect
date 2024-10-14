@@ -1,0 +1,9 @@
+USE citizenConnect
+GO
+CREATE OR ALTER PROCEDURE GetViewByID
+    @ViewID VARCHAR(255)
+AS
+BEGIN
+    SELECT * FROM Views WHERE ViewID = @ViewID
+END
+GO

@@ -1,0 +1,9 @@
+USE citizenConnect
+GO
+CREATE OR ALTER PROCEDURE DeleteView
+    @ViewID VARCHAR(255)
+AS
+BEGIN
+    DELETE FROM Views WHERE ViewID = @ViewID
+END
+GO

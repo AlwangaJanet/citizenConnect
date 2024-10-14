@@ -1,0 +1,205 @@
+#### 
+# Register User
+POST http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+  "name": "Lilian Alwanga",
+  "email": "vee8778@gmail.com",
+  "password": "JanetAlwanga@1!",
+  "role": "Citizen",
+  "terms":"true"
+}
+#### Login User
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+# {
+#   "email": "janetjanto3@gmail.com",
+#   "password": "NewPassword@1!"
+# }
+
+{
+  "email": "alwanga.janet20@students.dkut.ac.ke",
+  "password": "JanetAlwanga@1!"
+}
+
+# {
+#   "email": "sistee001@gmail.com",
+#   "password":"JanetAlwanga@1!"
+# }
+# {
+#    "email": "alvinalwanga56@gmail.com",
+#    "password": "JanetAlwanga@1!"
+# }
+// get all the users
+######
+GET http://localhost:4000/auth/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5OWE4Yjk2LWFjNDUtNDM2YS1hNWUyLTE5MjhkYmE3Y2MyMSIsIm5hbWUiOiJKYW5ldCBBbnlvbmEiLCJyb2xlIjoiQWRtaW4iLCJleHAiOjE3MjE2Mzk5ODQsImlhdCI6MTcyMTYzMjc4NH0.PakSgEBLrt9VX4VNFHXIo4hKQILkgKi8dCHZqsxsM3c
+####
+//Get a User
+GET http://localhost:4000/auth/users/e8630c0e-3f70-479d-8838-1099a952a7bd
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5OWE4Yjk2LWFjNDUtNDM2YS1hNWUyLTE5MjhkYmE3Y2MyMSIsIm5hbWUiOiJKYW5ldCBBbnlvbmEiLCJyb2xlIjoiQWRtaW4iLCJleHAiOjE3MjE2Mzk5ODQsImlhdCI6MTcyMTYzMjc4NH0.PakSgEBLrt9VX4VNFHXIo4hKQILkgKi8dCHZqsxsM3c
+
+####
+//update user by id 
+PUT http://localhost:4000/auth/users/e8630c0e-3f70-479d-8838-1099a952a7bd
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5OWE4Yjk2LWFjNDUtNDM2YS1hNWUyLTE5MjhkYmE3Y2MyMSIsIm5hbWUiOiJKYW5ldCBBbnlvbmEiLCJyb2xlIjoiQWRtaW4iLCJleHAiOjE3MjE2Mzk5ODQsImlhdCI6MTcyMTYzMjc4NH0.PakSgEBLrt9VX4VNFHXIo4hKQILkgKi8dCHZqsxsM3c
+Content-Type: application/json
+
+{
+  "name": "Janet Anyona",
+  "email": "janetjanto3@gmail.com",
+  "password": "NewPassword@1!",
+  "role": "Official",
+  "isApproved": true
+}
+
+####
+//delete user by id 
+DELETE http://localhost:4000/auth/users/79866733-449d-4219-b015-e00211e191ff
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5OWE4Yjk2LWFjNDUtNDM2YS1hNWUyLTE5MjhkYmE3Y2MyMSIsIm5hbWUiOiJKYW5ldCBBbnlvbmEiLCJyb2xlIjoiQWRtaW4iLCJleHAiOjE3MjE2Mzk5ODQsImlhdCI6MTcyMTYzMjc4NH0.PakSgEBLrt9VX4VNFHXIo4hKQILkgKi8dCHZqsxsM3c
+
+####
+//Approve Official
+PUT http://localhost:4000/auth/users/approve/e8630c0e-3f70-479d-8838-1099a952a7bd
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5OWE4Yjk2LWFjNDUtNDM2YS1hNWUyLTE5MjhkYmE3Y2MyMSIsIm5hbWUiOiJKYW5ldCBBbnlvbmEiLCJyb2xlIjoiQWRtaW4iLCJleHAiOjE3MjE2Mzk5ODQsImlhdCI6MTcyMTYzMjc4NH0.PakSgEBLrt9VX4VNFHXIo4hKQILkgKi8dCHZqsxsM3c
+
+####
+//Add View
+POST http://localhost:4000/view
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNmM2Q4OTI2LWQ1ZjItNDg4OC04MmU2LTUyYmRmNzkwMzhhNiIsIm5hbWUiOiJBbHZpbiBBbHdhbmdhIiwicm9sZSI6IkNpdGl6ZW4iLCJleHAiOjE3MjE4Mjk3OTgsImlhdCI6MTcyMTgyMjU5OH0.f04dLW8GrRwmqQo9v6fF_E1txTcJ7STQhpNwDEw6we0
+Content-Type: application/json
+
+{
+  "UserID": "3f3d8926-d5f2-4888-82e6-52bdf79038a6",
+  "Title": "Recent Protests in Kenya: A Citizen's Perspective",
+  "Description": "As a concerned citizen, I've observed the recent wave of protests sweeping across Kenya. These demonstrations primarily stem from rising economic pressures and dissatisfaction with government policies."
+}
+####
+// Get Views
+GET http://localhost:4000/view
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNmM2Q4OTI2LWQ1ZjItNDg4OC04MmU2LTUyYmRmNzkwMzhhNiIsIm5hbWUiOiJBbHZpbiBBbHdhbmdhIiwicm9sZSI6IkNpdGl6ZW4iLCJleHAiOjE3MjE4NDU0MTAsImlhdCI6MTcyMTgzODIxMH0.vIVVXy7GcMXA5XLclYls1Vzj838Mf7n8EOYD24PNkh8
+
+###
+// Get view by ID
+GET http://localhost:4000/view/eb4c1d50-1eb5-43bd-9687-716ebdaa9ffe
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNmM2Q4OTI2LWQ1ZjItNDg4OC04MmU2LTUyYmRmNzkwMzhhNiIsIm5hbWUiOiJBbHZpbiBBbHdhbmdhIiwicm9sZSI6IkNpdGl6ZW4iLCJleHAiOjE3MjE2NDAxNTMsImlhdCI6MTcyMTYzMjk1M30.HGC0QT4V8-PK3TOteQMC45yP8SdgyBVuhTQaMLGJ7bk
+####
+//Update a View
+PUT http://localhost:4000/view/eb4c1d50-1eb5-43bd-9687-716ebdaa9ffe
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNmM2Q4OTI2LWQ1ZjItNDg4OC04MmU2LTUyYmRmNzkwMzhhNiIsIm5hbWUiOiJBbHZpbiBBbHdhbmdhIiwicm9sZSI6IkNpdGl6ZW4iLCJleHAiOjE3MjE2NDAxNTMsImlhdCI6MTcyMTYzMjk1M30.HGC0QT4V8-PK3TOteQMC45yP8SdgyBVuhTQaMLGJ7bk
+Content-Type: application/json
+
+{
+  "UserID": "3f3d8926-d5f2-4888-82e6-52bdf79038a6",
+  "Title": "Recent Protests in Kenya: A Citizen's Perspective",
+  "Description": "As a concerned citizen, I've observed the recent wave of protests sweeping across Kenya. These demonstrations primarily stem from rising economic pressures and dissatisfaction with government policies. Many citizens are voicing their frustrations over increasing living costs and perceived governmental inefficiencies. The protests are a reflection of a broader call for transparency, economic reform, and improved public services."
+}
+####
+// Delete a view
+DELETE http://localhost:4000/view/eb4c1d50-1eb5-43bd-9687-716ebdaa9ffe
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU4NjMwYzBlLTNmNzAtNDc5ZC04ODM4LTEwOTlhOTUyYTdiZCIsIm5hbWUiOiJKYW5ldCBBbnlvbmEiLCJyb2xlIjoiT2ZmaWNpYWwiLCJleHAiOjE3MjE2NDA2MDUsImlhdCI6MTcyMTYzMzQwNX0.cxIb09IR--xtxPZdNCk-1n7ZShL-4VOHjjUscDk1858
+####
+// Add Incident
+POST http://localhost:4000/incident
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNmM2Q4OTI2LWQ1ZjItNDg4OC04MmU2LTUyYmRmNzkwMzhhNiIsIm5hbWUiOiJBbHZpbiBBbHdhbmdhIiwicm9sZSI6IkNpdGl6ZW4iLCJleHAiOjE3MjE2NDAxNTMsImlhdCI6MTcyMTYzMjk1M30.HGC0QT4V8-PK3TOteQMC45yP8SdgyBVuhTQaMLGJ7bk
+Content-Type: application/json
+
+{
+  "UserID": "3f3d8926-d5f2-4888-82e6-52bdf79038a6",
+  "Title": "Recent Protests in Kenya: A Citizen's Perspective",
+  "Description": "As a concerned citizen, I've observed the recent wave of protests sweeping across Kenya. These demonstrations primarily stem from rising economic pressures and dissatisfaction with government policies.",
+  "MediaUrl":"https://img.lemde.fr/2024/06/25/0/0/8640/5760/664/0/75/0/b4f849c_f7b42eb5c8084264a8be7c34f1e635db-2-358b278b6635461197d2bad5226614bb.jpg"
+}
+####
+// Get incidents
+GET http://localhost:4000/incident
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNmM2Q4OTI2LWQ1ZjItNDg4OC04MmU2LTUyYmRmNzkwMzhhNiIsIm5hbWUiOiJBbHZpbiBBbHdhbmdhIiwicm9sZSI6IkNpdGl6ZW4iLCJleHAiOjE3MjE4NDU0MTAsImlhdCI6MTcyMTgzODIxMH0.vIVVXy7GcMXA5XLclYls1Vzj838Mf7n8EOYD24PNkh8
+####
+//Get an incident
+GET http://localhost:4000/incident/6d09b52a-c9c6-42b4-85a5-7d5d2b12b66a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNmM2Q4OTI2LWQ1ZjItNDg4OC04MmU2LTUyYmRmNzkwMzhhNiIsIm5hbWUiOiJBbHZpbiBBbHdhbmdhIiwicm9sZSI6IkNpdGl6ZW4iLCJleHAiOjE3MjE2NDAxNTMsImlhdCI6MTcyMTYzMjk1M30.HGC0QT4V8-PK3TOteQMC45yP8SdgyBVuhTQaMLGJ7bk
+####
+//Update an Incident
+PUT http://localhost:4000/incident/b4aa2ec5-0120-412c-8ce3-5e17c14b6119
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNmM2Q4OTI2LWQ1ZjItNDg4OC04MmU2LTUyYmRmNzkwMzhhNiIsIm5hbWUiOiJBbHZpbiBBbHdhbmdhIiwicm9sZSI6IkNpdGl6ZW4iLCJleHAiOjE3MjE2NDAxNTMsImlhdCI6MTcyMTYzMjk1M30.HGC0QT4V8-PK3TOteQMC45yP8SdgyBVuhTQaMLGJ7bk
+Content-Type: application/json
+
+{
+  "UserID": "3f3d8926-d5f2-4888-82e6-52bdf79038a6",
+  "Title": "Recent Protests in Kenya: A Citizen's Perspective",
+  "Description": "As a concerned citizen, I've observed the recent wave of protests sweeping across Kenya. These demonstrations primarily stem from rising economic pressures and dissatisfaction with government policies.",
+  "MediaUrl":"https://img.lemde.fr/2024/06/25/0/0/8640/5760/664/0/75/0/b4f849c_f7b42eb5c8084264a8be7c34f1e635db-2-358b278b6635461197d2bad5226614bb.jpg"
+}
+####
+// Delete an Incident
+DELETE http://localhost:4000/incident/b4aa2ec5-0120-412c-8ce3-5e17c14b6119
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU4NjMwYzBlLTNmNzAtNDc5ZC04ODM4LTEwOTlhOTUyYTdiZCIsIm5hbWUiOiJKYW5ldCBBbnlvbmEiLCJyb2xlIjoiT2ZmaWNpYWwiLCJleHAiOjE3MjE2NDA4ODcsImlhdCI6MTcyMTYzMzY4N30.lp3mcMzBYNUPwQ_BDduvueaRboFXJePKxZFb2TkZxf4
+####
+//Add pdf
+POST http://localhost:4000/educate
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU4NjMwYzBlLTNmNzAtNDc5ZC04ODM4LTEwOTlhOTUyYTdiZCIsIm5hbWUiOiJKYW5ldCBBbnlvbmEiLCJyb2xlIjoiT2ZmaWNpYWwiLCJleHAiOjE3MjE2NDA4ODcsImlhdCI6MTcyMTYzMzY4N30.lp3mcMzBYNUPwQ_BDduvueaRboFXJePKxZFb2TkZxf4
+Content-Type: application/json
+
+{
+  "OfficialID": "3f3d8926-d5f2-4888-82e6-52bdf79038a6",
+  "Title": "Finance Bill",
+  "PDFUrl": "https://bowmanslaw.com/insights/kenya-the-finance-bill-2024/"
+}
+#### 
+// Get PDFS
+GET http://localhost:4000/educate
+Authorization: Bearer Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNmM2Q4OTI2LWQ1ZjItNDg4OC04MmU2LTUyYmRmNzkwMzhhNiIsIm5hbWUiOiJBbHZpbiBBbHdhbmdhIiwicm9sZSI6IkNpdGl6ZW4iLCJleHAiOjE3MjE2NDAxNTMsImlhdCI6MTcyMTYzMjk1M30.HGC0QT4V8-PK3TOteQMC45yP8SdgyBVuhTQaMLGJ7bk
+####
+// Get pdf
+GET http://localhost:4000/educate/56420e6c-0fa3-400f-b1e8-0690c6d92ec6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNmM2Q4OTI2LWQ1ZjItNDg4OC04MmU2LTUyYmRmNzkwMzhhNiIsIm5hbWUiOiJBbHZpbiBBbHdhbmdhIiwicm9sZSI6IkNpdGl6ZW4iLCJleHAiOjE3MjE2MDcwNTUsImlhdCI6MTcyMTU5OTg1NX0.JdLsr8YSnXB-OMTP_ZHazYMeXtOJEvEQ_992ZQ6md80
+####
+// Delete PDF
+DELETE  http://localhost:4000/educate/56420e6c-0fa3-400f-b1e8-0690c6d92ec6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU4NjMwYzBlLTNmNzAtNDc5ZC04ODM4LTEwOTlhOTUyYTdiZCIsIm5hbWUiOiJKYW5ldCBBbnlvbmEiLCJyb2xlIjoiT2ZmaWNpYWwiLCJleHAiOjE3MjE2MTExODMsImlhdCI6MTcyMTYwMzk4M30.58rl7zGrXET6giW_eim4NFAQki0U5PVHKY5wZqQqF8s
+####
+// Add Poll
+POST http://localhost:4000/polls
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU4NjMwYzBlLTNmNzAtNDc5ZC04ODM4LTEwOTlhOTUyYTdiZCIsIm5hbWUiOiJKYW5ldCBBbnlvbmEiLCJyb2xlIjoiT2ZmaWNpYWwiLCJleHAiOjE3MjE2MTExODMsImlhdCI6MTcyMTYwMzk4M30.58rl7zGrXET6giW_eim4NFAQki0U5PVHKY5wZqQqF8s
+Content-Type: application/json
+
+{
+  "OfficialID": "3f3d8926-d5f2-4888-82e6-52bdf79038a6",
+  "Question": "Do you support the ongoing protest?",
+  "Option1": "Yes",
+  "Option2": "No"
+}
+####
+// Get Polls
+GET http://localhost:4000/polls
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNmM2Q4OTI2LWQ1ZjItNDg4OC04MmU2LTUyYmRmNzkwMzhhNiIsIm5hbWUiOiJBbHZpbiBBbHdhbmdhIiwicm9sZSI6IkNpdGl6ZW4iLCJleHAiOjE3MjE2MTU2ODUsImlhdCI6MTcyMTYwODQ4NX0.fLBXA3-fZbd7Z094SDUKVHtTjyB0mraYAYmkipZimXM
+
+####
+// Get Poll
+GET http://localhost:4000/polls/acf4740f-7c80-4d4b-a4b4-ea4bfcaa07f9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNmM2Q4OTI2LWQ1ZjItNDg4OC04MmU2LTUyYmRmNzkwMzhhNiIsIm5hbWUiOiJBbHZpbiBBbHdhbmdhIiwicm9sZSI6IkNpdGl6ZW4iLCJleHAiOjE3MjE2MTU2ODUsImlhdCI6MTcyMTYwODQ4NX0.fLBXA3-fZbd7Z094SDUKVHtTjyB0mraYAYmkipZimXM
+ 
+####
+// Delete Poll
+DELETE http://localhost:4000/polls/acf4740f-7c80-4d4b-a4b4-ea4bfcaa07f9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU4NjMwYzBlLTNmNzAtNDc5ZC04ODM4LTEwOTlhOTUyYTdiZCIsIm5hbWUiOiJKYW5ldCBBbnlvbmEiLCJyb2xlIjoiT2ZmaWNpYWwiLCJleHAiOjE3MjE2MTExODMsImlhdCI6MTcyMTYwMzk4M30.58rl7zGrXET6giW_eim4NFAQki0U5PVHKY5wZqQqF8s
+
+####
+// Add poll Response
+POST http://localhost:4000/polls/pollResponses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNmM2Q4OTI2LWQ1ZjItNDg4OC04MmU2LTUyYmRmNzkwMzhhNiIsIm5hbWUiOiJBbHZpbiBBbHdhbmdhIiwicm9sZSI6IkNpdGl6ZW4iLCJleHAiOjE3MjE2MTU2ODUsImlhdCI6MTcyMTYwODQ4NX0.fLBXA3-fZbd7Z094SDUKVHtTjyB0mraYAYmkipZimXM
+Content-Type: application/json
+
+{
+  "PollID": "ac4e465a-0540-4200-b5d6-385b646fbe06",
+  "UserID": "3f3d8926-d5f2-4888-82e6-52bdf79038a6",
+  "SelectedOption": "Option1"
+}
+
+####
+// Get Responses
+GET http://localhost:4000/polls/pollResponses/ac4e465a-0540-4200-b5d6-385b646fbe06
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU4NjMwYzBlLTNmNzAtNDc5ZC04ODM4LTEwOTlhOTUyYTdiZCIsIm5hbWUiOiJKYW5ldCBBbnlvbmEiLCJyb2xlIjoiT2ZmaWNpYWwiLCJleHAiOjE3MjE2MTExODMsImlhdCI6MTcyMTYwMzk4M30.58rl7zGrXET6giW_eim4NFAQki0U5PVHKY5wZqQqF8s
+
